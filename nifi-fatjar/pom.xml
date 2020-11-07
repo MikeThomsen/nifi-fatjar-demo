@@ -56,7 +56,7 @@
         </dependency>
         <dependency>
             <groupId>com.mycompany</groupId>
-            <artifactId>client-api</artifactId>
+            <artifactId>client-jar</artifactId>
         </dependency>
     </dependencies>
 </project>

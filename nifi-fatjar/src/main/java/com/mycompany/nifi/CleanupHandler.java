@@ -31,7 +31,7 @@ public class CleanupHandler {
 
     /**
      * Execute a cleanup operation on a flowfile.
-     * 
+     *
      * @param flowFile
      * @throws CleanupFailedException
      */
