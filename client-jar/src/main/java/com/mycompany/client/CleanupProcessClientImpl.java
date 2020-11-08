@@ -19,12 +19,12 @@ public class CleanupProcessClientImpl implements CleanupProcessClient {
 
     /**
      * The implementation will convert a non-standard date into an ISO8601 string.
-     * 
+     *
      * @param is InputStream opened by ProcessSession
      * @return
      */
     @Override
-    public byte[] stripInvalidDates(InputStream is) {
+    public byte[] stripInvalidDates(InputStream is) throws CleanupFailedException {
         DateFormat inputDate = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
         DateFormat outputDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 
@@ -39,7 +39,7 @@ public class CleanupProcessClientImpl implements CleanupProcessClient {
 
             return MAPPER.writerWithDefaultPrettyPrinter().writeValueAsBytes(record);
         } catch (ParseException | IOException e) {
-            return null;
+           throw new CleanupFailedException(e);
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.mycompany.nifi;
 
+import com.mycompany.client.CleanupFailedException;
 import com.mycompany.client.CleanupProcessClient;
 import org.apache.nifi.flowfile.FlowFile;
 import org.apache.nifi.logging.ComponentLog;

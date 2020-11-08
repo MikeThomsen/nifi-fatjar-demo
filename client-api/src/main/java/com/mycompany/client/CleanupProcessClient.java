@@ -12,5 +12,5 @@ public interface CleanupProcessClient {
 	 * @param is InputStream opened by ProcessSession
 	 * @return a byte array containing the pristine JSON
 	 */
-    byte[] stripInvalidDates(InputStream is);
+    byte[] stripInvalidDates(InputStream is) throws CleanupFailedException;
 }

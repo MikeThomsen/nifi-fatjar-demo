@@ -1,4 +1,4 @@
-package com.mycompany.nifi;
+package com.mycompany.client;
 
 /**
  * An exception that is thrown by the cleanup handler when it encounters a processing error.

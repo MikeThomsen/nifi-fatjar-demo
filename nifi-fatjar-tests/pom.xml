@@ -8,7 +8,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <groupId>com.mycompany</groupId>
-    <artifactId>nifi-fatjar</artifactId>
+    <artifactId>nifi-fatjar-tests</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -47,17 +47,34 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.mycompany</groupId>
+            <artifactId>nifi-fatjar</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.apache.nifi</groupId>
             <artifactId>nifi-api</artifactId>
-            <scope>provided</scope>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.nifi</groupId>
             <artifactId>nifi-mock</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.mycompany</groupId>
-            <artifactId>client-jar</artifactId>
+            <groupId>org.apache.nifi</groupId>
+            <artifactId>nifi-scripting-processors</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-jsr223</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
